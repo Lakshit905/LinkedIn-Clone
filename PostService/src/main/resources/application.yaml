@@ -1,0 +1,22 @@
+server:
+  port: 9010
+  servlet:
+    context-path: /api/v1/posts
+
+spring:
+  application:
+    name: PostService
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/PostService
+    username: postgres
+    password: Lakshit@22
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
