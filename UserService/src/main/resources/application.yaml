@@ -1,5 +1,10 @@
 server:
   port: 9020
+  servlet:
+    context-path: /api/v1/users
+
+jwt:
+  secretKey: qajhjhjdsjdfkjafjkjfjdhfkfhjdkhfjdhfjdhfeirueirieredjshfddfjfj
 
 spring:
   application:
