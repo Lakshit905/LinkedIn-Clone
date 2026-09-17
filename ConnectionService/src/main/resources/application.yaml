@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: connection-service
+  neo4j:
+    uri: bolt://localhost:7687
+    authentication:
+      username: neo4j
+      password: Lakshit@22
+server:
+  port: 9040
+#Eureka Client Config
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka

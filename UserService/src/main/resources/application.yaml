@@ -1,14 +1,14 @@
 server:
   port: 9020
   servlet:
-    context-path: /api/v1/users
+    context-path: /users
 
 jwt:
   secretKey: qajhjhjdsjdfkjafjkjfjdhfkfhjdkhfjdhfjdhfeirueirieredjshfddfjfj
 
 spring:
   application:
-    name: UserService
+    name: user-service
 
   datasource:
     url: jdbc:postgresql://localhost:5432/UserService
@@ -23,3 +23,8 @@ spring:
     properties:
       hibernate:
         format_sql: true
+#Eureka Client Config
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
