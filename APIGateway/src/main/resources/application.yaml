@@ -12,18 +12,22 @@ spring:
                 - Path=/api/v1/users/**
               filters:
                 - StripPrefix=2
+
             - id: post-service
               uri: lb://POST-SERVICE
               predicates:
                 - Path=/api/v1/posts/**
               filters:
                 - StripPrefix=2
+                - name: AuthenticationFilter
+
             - id: connection-service
               uri: lb://CONNECTION-SERVICE
               predicates:
                 - Path=/api/v1/connections/**
               filters:
                 - StripPrefix=2
+                - name: AuthenticationFilter
 #Eureka Client Config
 eureka:
   client:
@@ -31,3 +35,6 @@ eureka:
       defaultZone: http://localhost:8761/eureka
 server:
   port: 8888
+#Jwt Key
+jwt:
+  secretKey: qajhjhjdsjdfkjafjkjfjdhfkfhjdkhfjdhfjdhfeirueirieredjshfddfjfj
